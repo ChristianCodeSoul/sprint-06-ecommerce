@@ -920,7 +920,8 @@ main > button:hover {
     padding: 4px 0;
   }
   .product-card {
-    height: 276px;
+    height: auto;
+    min-height: 0;
     margin: 12px 4px;
     grid-template-columns: 1fr;
     border-radius: 22px;
@@ -1105,4 +1106,40 @@ main > button:hover {
 }
 .cart-popup__check:hover {
   background: var(--accent-dark);
+}
+
+@media (max-width: 768px) {
+  .product-detail__visual {
+    width: 110px;
+    height: 110;
+  }
+}
+
+@media (max-width: 380px) {
+  html,
+  body,
+  #root {
+    min-width: 0;
+    overflow-x : hidden;
+  }
+  .products-page,
+  .cart-page,
+  .checkout-page {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  
+  .product-card {
+    width: calc(100% - 4px);
+    margin-left: 2px;
+    margin-right: 2px;
+  }
+  .product-card__content {
+    padding: 16px;
+  }
+  .products-header h1,
+  .cart-page h1,
+  .checkout-header h1 {
+    font-size: clamp(2.5rem, 14vw, 3.5rem);
+  }
 }
