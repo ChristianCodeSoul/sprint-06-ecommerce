@@ -1,0 +1,11 @@
+.app {
+  min-height: 100vh; 
+
+}
+.page-shell {
+  min-height: 100vh;
+
+}
+.theme-toggle__icon {
+  line-height: 1;
+}
